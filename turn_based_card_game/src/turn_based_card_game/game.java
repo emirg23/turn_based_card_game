@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
 public class game {
 	
 	static player player[] = new player[2]; // there is only 2 players
