@@ -16,7 +16,7 @@ public class game {
 	
 	static Random random = new Random(); // for random rarity
 	
-	static List<Integer> usedRows = new ArrayList<Integer>(); // making sure the player doesn't use the same exact card more than one time
+	static List<Integer> usedRows = new ArrayList<Integer>(); // making sure the player does not use the same exact card more than one time
 	
 	//cards
 	
