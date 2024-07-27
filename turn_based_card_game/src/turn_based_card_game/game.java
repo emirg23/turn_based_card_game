@@ -276,7 +276,7 @@ public class game {
 			for(int k = 0; k<9; k++) { // finding empty spot in deck and putting spell
 			
 				if(deck[k]==null) {
-					deck[k] = spell;
+					deck[k] = copyCard(spell);
 					break;
 				}
 			}	
