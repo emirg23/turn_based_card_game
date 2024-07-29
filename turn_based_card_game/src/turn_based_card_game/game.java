@@ -21,7 +21,7 @@ public class game {
 	//cards
 	
 	//cost 1 
-	static spell miss = new spell(1,"empty",1,"miss");
+	static spell miss = new spell(1,"empty",1,"waste of mana");
 	
 	static creature scarecrow = new creature(1,"",2,"scarecrow",0,2);
 	
