@@ -233,13 +233,10 @@ public class game {
 				
 				if(!(player[i].deck[l]!=null && player[i].deck[l].getClass()==creature.class))// it is a creature
 					checkIfCreatureHasSpeciality(player, i, l);
-				
-				if(l==8)
-					creatureDitto(player[i]);
-				
-				
+								
 			}
 		
+			creatureDitto(player[i]);
 		
 		}
 	
