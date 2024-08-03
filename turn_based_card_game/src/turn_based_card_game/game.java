@@ -231,7 +231,7 @@ public class game {
 			
 			for(int l = 0; l<9; l++) { // l for checking every spot in player deck
 				
-				if(!(player[i].deck[l]==null || player[i].deck[l].getClass()==spell.class))// it is a creature
+				if(!(player[i].deck[l]!=null && player[i].deck[l].getClass()==creature.class))// it is a creature
 					checkIfCreatureHasSpeciality(player, i, l);
 				
 				if(l==8)
@@ -735,17 +735,17 @@ public class game {
 	}
 	
 	
-	public static void attack(creature attacker, card[] defenderDeck, int defenderIndex) {//creatures attacking each other
+	public static void attack(creature attacker, card[] defenderDeck, int defenderIndex) { // creatures attacking each other
 		
 		System.out.println("\n"+attacker.name+"'s attack damage: "+attacker.attackDamage+"\n"+defenderDeck[defenderIndex].name+"'s health: "+ ((creature)defenderDeck[defenderIndex]).health 
 				+ "\n" + attacker.name+ " attacked "+ defenderDeck[defenderIndex].name+" and");
 		
-		if(attacker.attackDamage >= ((creature)defenderDeck[defenderIndex]).health){//enough damage to kill
+		if(attacker.attackDamage >= ((creature)defenderDeck[defenderIndex]).health){ // enough damage to kill
 			System.out.println("\n"+defenderDeck[defenderIndex].name +" has been killed.");
 			defenderDeck[defenderIndex] = null;
 		}
 		
-		else {//not enough damage to kill
+		else { // not enough damage to kill
 			((creature)defenderDeck[defenderIndex]).health = ((creature)defenderDeck[defenderIndex]).health-attacker.attackDamage;
 			System.out.println("\n"+defenderDeck[defenderIndex].name +"'s new health is " + ((creature)defenderDeck[defenderIndex]).health +".");
 		}
@@ -909,7 +909,7 @@ public class game {
 			if(deck[i] == null || deck[i].getClass().equals(spell.class));
 			
 			else
-			return true;
+				return true;
 			
 		}
 		return false; // if we get out of the for() block without returning, that means we got no card except nulls/spells so it's not an attackable deck
