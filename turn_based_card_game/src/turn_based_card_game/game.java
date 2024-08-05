@@ -231,7 +231,7 @@ public class game {
 			
 			for(int l = 0; l<9; l++) { // l for checking every spot in player deck
 				
-				if(!(player[i].deck[l]!=null && player[i].deck[l].getClass()==creature.class))// it is a creature
+				if(player[i].deck[l]!=null && player[i].deck[l].getClass()==creature.class)// it is a creature
 					checkIfCreatureHasSpeciality(player, i, l);
 								
 			}
@@ -245,7 +245,7 @@ public class game {
 
 	public static void checkIfCreatureHasSpeciality(player player[],int playerIndex,int creatureIndex) {
 		
-		String x = player[playerIndex].deck[creatureIndex].name; // spell name == x
+			String x = player[playerIndex].deck[creatureIndex].name; // spell name == x
 		
 		if(x==bleeder.name) 
 			creatureBleeder(player, playerIndex, creatureIndex);
